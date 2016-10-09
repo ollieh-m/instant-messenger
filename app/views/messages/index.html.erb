@@ -1,0 +1,8 @@
+<p>Signed in as <%= current_user.email %>, user ID <%= current_user.id %></p>
+
+<% @users.each do |user| %>
+    <p class="user" id="<%= user.id %>"><%= user.email %><span>
+        <button class="open-chat" id="<%= user.id %>">OPEN CHAT</button>
+    </span></p>
+    <div class='chat-window' id="<%= user.id %>"></div>
+<% end %>
